@@ -46,4 +46,3 @@ liGallery.appendChild(linkGallery)
 })
 
 new SimpleLightbox('ul.gallery a', { captionsData: "alt", captionDelay: 250 })
-

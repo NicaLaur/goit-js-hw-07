@@ -37,8 +37,9 @@ liGallery.appendChild(linkGallery)
 
     }, true)
 
-    document.addEventListener('keydown', evt => {
-        if (evt.key === 'Escape' && modal.visible()) {
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.visible()) {
+            e.preventDefault()
             modal.close()
         }
     })

@@ -1,7 +1,7 @@
+
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-import SimpleLightbox from "simplelightbox"
 
 const ulGallery = document.querySelector('.gallery');
 
@@ -25,24 +25,7 @@ liGallery.appendChild(linkGallery)
     linkGallery.appendChild(imgGallery)
 
 });
-    
-    const modal = basicLightbox.create('<img>')
-    const modalImg = modal.element().querySelector('img')
-    
-    ulGallery.addEventListener('click', function(event) {
-        event.preventDefault();
-    modalImg.src = event.target.dataset.source;
-    modal.show();
-
-    }, true)
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && modal.visible()) {
-            e.preventDefault()
-            modal.close()
-        }
-    })
+   
 
 })
-
-new SimpleLightbox('ul.gallery a', { captionsData: "alt", captionDelay: 250 })
+const galleryHandler = new SimpleLightbox('ul.gallery a', { captionsData: "alt", captionDelay: 250 })
